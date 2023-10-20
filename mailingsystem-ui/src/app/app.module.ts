@@ -21,7 +21,9 @@ import {environment} from "../environments/environment";
     HttpClientModule
   ],
   providers: [
-    { provide: 'API_BASE_URL', useValue: environment.apiBaseUrl },
+    {
+      provide: 'API_BASE_URL', useValue: environment.apiBaseUrl,
+    },
     {
       provide: HTTP_INTERCEPTORS,
       useClass: AuthHttpInterceptor,
