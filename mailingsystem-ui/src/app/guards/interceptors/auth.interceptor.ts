@@ -57,13 +57,13 @@ export class AuthHttpInterceptor implements HttpInterceptor {
   private processUserNotLoggedInResponse(err: any): Observable<never> {
     // if unauthorized
     if (err.status == 401) {
-      // this.localStorageService.removePersisted('auth');
-      // this.router.navigate(['/auth/login'], {
-      //   queryParams: {
-      //     //returnUrl: this.route.snapshot['_routerState'].url
-      //     returnUrl: 'todo'
-      //   }
-      // });
+      localStorage.removeItem('authToken');
+      // redirect to login page
+      /* this.router.navigate(['/auth/login'], {
+         queryParams: {
+           returnUrl: this.route.snapshot['_routerState'].url
+         }
+       }).then(r => );*/
     }
 
     // if bad request
