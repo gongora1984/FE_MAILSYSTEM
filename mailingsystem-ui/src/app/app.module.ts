@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {AppMaterialModule} from "./app-material.module";
 import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {AuthHttpInterceptor} from "./guards/interceptors/auth.interceptor";
+import {environment} from "../environments/environment";
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import {AuthHttpInterceptor} from "./guards/interceptors/auth.interceptor";
     HttpClientModule
   ],
   providers: [
+    { provide: 'API_BASE_URL', useValue: environment.apiBaseUrl },
     {
       provide: HTTP_INTERCEPTORS,
       useClass: AuthHttpInterceptor,

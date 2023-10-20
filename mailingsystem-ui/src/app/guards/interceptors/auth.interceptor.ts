@@ -18,7 +18,7 @@ export class AuthHttpInterceptor implements HttpInterceptor {
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    @Inject(`${environment.apiBaseUrl}`) private apiBaseUrl: string
+    @Inject('API_BASE_URL') private apiBaseUrl: string
   ) {}
 
   intercept(
