@@ -43,7 +43,8 @@ export class SignInComponent implements OnInit{
        {
          next: res => {
            this.authservice.setLocalStorage(res.apiKey);
-           //this._router.navigate(['dashboard']);
+           this._router.navigate(['dashboard']);
+           return;
          },
          error: (err: any) => {
            //TODO: display error

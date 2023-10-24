@@ -4,12 +4,15 @@ import {PageNotFoundComponent} from "./shared/page-not-found/page-not-found.comp
 
 const routes: Routes = [
   {
-    path: '', loadChildren: () => import('./modules/auth/auth.module').then(m => m.AuthModule)
+    path: 'account', loadChildren: () => import('./modules/auth/auth.module').then(m => m.AuthModule)
   },
   {
-    path: 'auth', loadChildren: () => import('./modules/auth/auth.module').then(m => m.AuthModule)
+    path: 'dashboard',
+    loadChildren: () => import('./modules/home/home.module').then(m => m.HomeModule),
+    //canActivate: [MsalGuard],
   },
-  { path: '**',
+  {
+    path: '**',
     pathMatch: 'full',
     component: PageNotFoundComponent
   }

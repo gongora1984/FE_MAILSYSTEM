@@ -3,7 +3,7 @@ import {HttpClient} from "@angular/common/http";
 import {LoginDto} from "../../models/login/login-dto";
 import {map, Observable} from "rxjs";
 import {LoginResponse} from "../../models/login/login-response";
-import {ApiResponseModel} from "../../models/api-reponse-dtos";
+import {environment} from "../../../environments/environment";
 
 @Injectable({
   providedIn: 'root',
@@ -13,7 +13,9 @@ export class AuthenticationService {
   constructor(private client: HttpClient) {}
 
   login(user: LoginDto): Observable<LoginResponse> {
-    return this.client.post<LoginResponse>('https://localhost:7111/api/Account/login', user)
+    const apiUrl = environment.apiBaseUrl;
+    const loginUrl = environment.endpoints.login.url
+    return this.client.post<LoginResponse>(`${apiUrl}/${loginUrl}`, user)
       .pipe(
         map(res => {
           if (!res.loginStatus) {
@@ -29,6 +31,6 @@ export class AuthenticationService {
   }
 
   removeLocalStorge(): void {
-    localStorage.removeItem('email');
+    localStorage.removeItem('authToken');
   }
 }

@@ -1,0 +1,86 @@
+@import "/src/styles/_variables.scss";
+
+.dashboard {
+  .actions {
+    overflow: auto;
+    white-space: nowrap;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0 1rem 0.8rem;
+  }
+
+  .table {
+    width: 100%;
+    color: $primary-color;
+
+    .table-row {
+      display: flex;
+      width: 100%;
+      padding: 0.5rem 0;
+
+      &:nth-of-type(even) {
+        background: $gray-color;
+      }
+    }
+
+    .table-data, .header__item {
+      margin: auto 0;
+    }
+
+    .icon-column {
+      margin: auto 1rem;
+    }
+
+    mat-icon {
+      color: $secondary-color;
+    }
+
+    .account-mail {
+      font-size: 2.5rem;
+    }
+  }
+
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+
+  a {
+    text-decoration: none;
+    color: $link-color !important;
+  }
+
+  ::ng-deep full-calendar a {
+    text-decoration: none !important;
+    color: $primary-color !important;
+  }
+
+  ::ng-deep full-calendar button {
+    background-color: $link-color !important;
+    border-color: $link-color !important;
+  }
+
+  app-widget-item {
+    margin: 0 1rem;
+    display: inline-block;
+  }
+
+  app-widget-item:hover {
+    cursor: pointer;
+    border-radius: $border-radius;
+    box-shadow: 0px 4px 5px -2px rgb(0 0 0 / 20%), 0px 7px 10px 1px rgb(0 0 0 / 14%), 0px 2px 16px 1px rgb(0 0 0 / 12%);
+    -webkit-transition: box-shadow 0.3s ease-in-out;
+    -moz-transition: box-shadow 0.3s ease-in-out;
+    -o-transition: box-shadow 0.3s ease-in-out;
+    transition: box-shadow 0.3s ease-in-out;
+  }
+
+  ::ng-deep .mat-tab-label {
+    min-width: 4.375rem !important;
+    opacity: 1 !important;
+  }
+
+  ::ng-deep .mat-tab-label-active .mat-tab-label-content {
+    color: $link-color;
+  }
+}
+
