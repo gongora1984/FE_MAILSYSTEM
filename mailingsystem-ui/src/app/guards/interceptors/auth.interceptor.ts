@@ -8,7 +8,6 @@ import {
 import { Inject, Injectable } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { catchError, Observable, throwError } from 'rxjs';
-import {environment} from "../../../environments/environment";
 
 export const BYPASS_SERVER = new HttpContextToken(() => false);
 @Injectable({

@@ -1,6 +1,6 @@
 export const environment = {
   production: true,
-  apiBaseUrl: 'https://localhost:49770/api',
+  apiBaseUrl: 'https://localhost:7111/api',
   apiKeyHeader: 'X-MAIL-SYS-CSO',
 
   //ENDPOINTS HERE

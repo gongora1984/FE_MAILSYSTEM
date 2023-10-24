@@ -1,0 +1,41 @@
+<div class="main-wrapper d-flex w-100 h-100" fxLayout="row" fxLayoutAlign="center center">
+  <mat-card class="box m-auto mat-elevation-z5">
+    <mat-card-header>
+      <mat-card-title>
+        <div class="mb-3">
+          <p>Logo Here</p>
+        </div>
+      </mat-card-title>
+    </mat-card-header>
+
+    <div class="text-center">
+      <h1>Sign In</h1>
+      <span>Welcome to RAS Cloud</span>
+    </div>
+
+    <mat-card-content>
+      <form class="mt-4 custom-input" [formGroup]="signin" (ngSubmit)=signIn()>
+        <mat-form-field appearance="outline" class="example-full-width">
+          <mat-label>Username</mat-label>
+          <mat-icon matSuffix>person</mat-icon>
+          <input type="email" matInput placeholder="" formControlName="email">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="example-full-width">
+          <mat-label>Password</mat-label>
+          <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          <input [type]="hide ? 'password' : 'text'" matInput placeholder="" formControlName="password">
+        </mat-form-field>
+
+        <div class="pb-4 text-center forgot-pass">
+          <a>Forgot LoginDto / Password?</a>
+        </div>
+
+        <button class="w-100" color="primary" type="submit" mat-raised-button>
+          Sign In
+        </button>
+
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
