@@ -58,11 +58,7 @@ export class AuthHttpInterceptor implements HttpInterceptor {
     if (err.status == 401) {
       localStorage.removeItem('authToken');
       // redirect to login page
-      /* this.router.navigate(['/auth/login'], {
-         queryParams: {
-           returnUrl: this.route.snapshot['_routerState'].url
-         }
-       }).then(r => );*/
+      this.router.navigate(['account']);
     }
 
     // if bad request

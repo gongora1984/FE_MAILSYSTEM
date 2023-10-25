@@ -1,15 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {PageNotFoundComponent} from "./shared/page-not-found/page-not-found.component";
+import {RoutingGuard} from "./guards/canactivate.guard";
 
 const routes: Routes = [
+  {
+    path: '',
+    loadChildren: () => import('./modules/home/home.module').then(m => m.HomeModule),
+    canActivate: [RoutingGuard],
+  },
   {
     path: 'account', loadChildren: () => import('./modules/auth/auth.module').then(m => m.AuthModule)
   },
   {
     path: 'dashboard',
     loadChildren: () => import('./modules/home/home.module').then(m => m.HomeModule),
-    //canActivate: [MsalGuard],
+    canActivate: [RoutingGuard],
   },
   {
     path: '**',
