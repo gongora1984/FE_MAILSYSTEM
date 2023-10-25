@@ -1,0 +1,17 @@
+<div class="menu-item-wrapper px-3" [style.margin-bottom]="pb0 ? '0px' : '1.5rem'"
+     [ngClass]="isGray ? 'mat-elevation-z0 py-0' : 'mat-elevation-z5 py-3'"
+     [class.backgroungGrey]="isGray">
+
+  <div class="d-flex" style="white-space: nowrap; cursor: move">
+    <span><strong>{{header}}</strong></span><span *ngIf="data">&nbsp; - {{data}}</span>
+    <span class="example-spacer"></span>
+    <div *ngIf="isCheckable" class="">
+      <mat-checkbox class="example-margin" color="primary" [checked]="active">Active</mat-checkbox>
+    </div>
+  </div>
+
+  <div *ngIf="!isGray">
+    <mat-divider></mat-divider>
+  </div>
+  <ng-content></ng-content>
+</div>

@@ -1,0 +1,43 @@
+@import "/src/styles/variables";
+
+mat-expansion-panel-header {
+  padding: 0 1.125rem;
+}
+
+.backgroungGrey{
+  background-color: $gray-color;
+
+  .mat-expansion-panel-header-title{
+    font-size: 0.9rem !important;
+    font-weight: 600;
+  }
+}
+
+.mat-expansion-panel-header.mat-expanded {
+  height: 3.125rem;
+}
+
+.mat-expansion-panel-header-title {
+  font-size: $title-size;
+  color: $primary-color;
+}
+
+.title {
+  padding-bottom: 1rem;
+}
+
+mat-accordion > .mat-expansion-panel-spacing, .mat-accordion .mat-expansion-panel {
+  border-radius: $border-radius;
+}
+
+mat-expansion-panel{
+  margin-bottom: 1.5rem !important;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.mat-expansion-panel:not(.mat-expanded) .mat-expansion-panel-header:hover:not([aria-disabled=true]) {
+  background: $over-link-color;
+}

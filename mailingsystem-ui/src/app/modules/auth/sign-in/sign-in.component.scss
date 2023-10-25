@@ -1,10 +1,14 @@
 @import "/src/styles/variables";
 
 .main-wrapper {
-  background-image: radial-gradient(circle at 5.83% 12.93%, #5675a8 0, #283040 50%, #000000 100%);
+  background-image: radial-gradient(circle at 5.83% 12.93%, #506690 0, #283040 50%, #384c74 100%);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   .box {
     max-width: 28rem;
@@ -17,12 +21,7 @@
     border-radius: $border-radius;
   }
 
-  .example-form {
-    min-width: 100%;
-    max-width: 30rem;
-  }
-
-  .example-full-width, .btn-block {
+  .form-full-width, .btn-block {
     width: 100%;
   }
 
@@ -57,6 +56,9 @@
 
   .forgot-pass{
     cursor: pointer;
+    display: flex;
+    justify-content: right;
+    align-items: flex-end;
     :hover{
       color: $link-color;
     }
@@ -65,4 +67,23 @@
   h1{
     margin-bottom: 0.5rem !important;
   }
+
+  //Buttons Centered
+  .btn-center{
+    margin: 0 auto;
+    display: flex;
+  }
+
+  h1.mt-4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  span.mt-4{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
 }

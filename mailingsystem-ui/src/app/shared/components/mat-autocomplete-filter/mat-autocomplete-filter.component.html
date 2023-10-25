@@ -1,0 +1,22 @@
+<mat-form-field [appearance]="appearance">
+  <input type="text"
+         [value]="value"
+         matInput
+         autocomplete="off"
+         [matAutocompleteDisabled]="disabled"
+         #autocompleteTrigger="matAutocompleteTrigger"
+         [placeholder]="placeholderFilter"
+         [formControl]="myControlFilterAutoComplete"
+         [matAutocomplete]="autoWithFilter">
+  <mat-label>{{label}}</mat-label>
+  <mat-icon matSuffix *ngIf="!showClear">search</mat-icon>
+  <div *ngIf="showClear" matSuffix (click)="clearInput()">
+    <mat-icon>close</mat-icon>
+  </div>
+  <mat-autocomplete #autoWithFilter="matAutocomplete"
+                    [displayWith]="displayFn" (optionSelected)="onSelectionChange($event)">
+    <mat-option *ngFor="let item of filteredOptions | async" [value]="item">
+      {{displayProperty ? item[displayProperty]: item}}
+    </mat-option>
+  </mat-autocomplete>
+</mat-form-field>
