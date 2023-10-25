@@ -1,0 +1,23 @@
+@import "/src/styles/variables";
+
+.main-footer{
+  footer {
+    background-image: radial-gradient(circle at 5.83% 12.93%, #506690 0, #283040 50%, #384c74 100%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:50px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+  }
+
+  p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    color: $text-white-color;
+  }
+}
+

@@ -9,11 +9,12 @@ import {RouterModule} from "@angular/router";
 import { LoadingComponent } from './components/loading/loading.component';
 import { GobackComponent } from './components/goback/goback.component';
 import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
-import { AddTableDataComponent } from './components/add-table-data/add-table-data.component';
 import { CoreComponent } from './components/core/core.component';
 import { CollasableContainerComponent } from './components/collasable-container/collasable-container.component';
-import { MatAutocompleteFilterComponent } from './components/mat-autocomplete-filter/mat-autocomplete-filter.component';
-import { SimpleContainerComponent } from './components/simple-container/simple-container.component';
+import { SideBarComponent } from './components/navigation/side-bar/side-bar.component';
+import { FooterComponent } from './components/navigation/footer/footer.component';
+import {SimpleContainerComponent} from "./components/simple-container/simple-container.component";
+import { HeaderComponent } from './components/navigation/header/header.component';
 
 
 @NgModule({
@@ -22,10 +23,11 @@ import { SimpleContainerComponent } from './components/simple-container/simple-c
     LoadingComponent,
     GobackComponent,
     ConfirmDialogComponent,
-    AddTableDataComponent,
     CollasableContainerComponent,
-    MatAutocompleteFilterComponent,
-    SimpleContainerComponent
+    SimpleContainerComponent,
+    SideBarComponent,
+    FooterComponent,
+    HeaderComponent
   ],
   imports: [
     CommonModule,
@@ -35,8 +37,10 @@ import { SimpleContainerComponent } from './components/simple-container/simple-c
     FormsModule,
     ReactiveFormsModule
   ],
-  exports:[
-    AppMaterialModule
+  exports: [
+    AppMaterialModule,
+    FooterComponent,
+    HeaderComponent
   ]
 })
 export class SharedModule {

@@ -1,10 +1,10 @@
-import {Component, OnDestroy} from '@angular/core';
-import {Subject} from "rxjs";
+import { Component, OnDestroy } from '@angular/core';
+import { Subject } from 'rxjs';
 
 @Component({
-  templateUrl: ''
+  template: ''
 })
-export abstract class  CoreComponent implements OnDestroy {
+export abstract class CoreComponent implements OnDestroy {
   protected onDestroy = new Subject<void>();
 
   ngOnDestroy() {
