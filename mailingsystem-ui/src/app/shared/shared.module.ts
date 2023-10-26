@@ -11,9 +11,7 @@ import { GobackComponent } from './components/goback/goback.component';
 import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
 import { CoreComponent } from './components/core/core.component';
 import { CollasableContainerComponent } from './components/collasable-container/collasable-container.component';
-import { SideBarComponent } from './components/navigation/side-bar/side-bar.component';
-import { FooterComponent } from './components/navigation/footer/footer.component';
-import {SimpleContainerComponent} from "./components/simple-container/simple-container.component";
+import { NavigationComponent } from './components/navigation/navigation.component';
 import { HeaderComponent } from './components/navigation/header/header.component';
 
 
@@ -24,10 +22,8 @@ import { HeaderComponent } from './components/navigation/header/header.component
     GobackComponent,
     ConfirmDialogComponent,
     CollasableContainerComponent,
-    SimpleContainerComponent,
-    SideBarComponent,
-    FooterComponent,
-    HeaderComponent
+    NavigationComponent,
+    HeaderComponent,
   ],
   imports: [
     CommonModule,
@@ -39,8 +35,6 @@ import { HeaderComponent } from './components/navigation/header/header.component
   ],
   exports: [
     AppMaterialModule,
-    FooterComponent,
-    HeaderComponent
   ]
 })
 export class SharedModule {

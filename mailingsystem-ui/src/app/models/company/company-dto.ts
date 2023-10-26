@@ -1,4 +1,9 @@
 export interface CompanyDto{
+  id?: string,
+  companyName?: string,
+}
+
+export interface CompanyExtendedDto{
   id: string,
   companyName: string,
   companyUsername: string,

@@ -1,24 +1,190 @@
-a {
-  text-decoration: none;
-  color: white;
+@import "/src/styles/variables";
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 3;
 }
 
-a:hover, a:active{
-  color: lightgray;
+.dashboard-container {
+  padding-left: 0.5rem;
+  padding-top: 6.5rem;
+  height: 100%;
+  background-color: $gray-color;
 }
 
-.navigation-items{
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+::ng-deep mat-toolbar {
+  background: $primary-color !important;
 }
 
-mat-toolbar{
-  border-radius: 3px;
+.toolbar-fixed-top {
+  //position: -webkit-sticky; /* For macOS/iOS Safari */
+  top: 0; /* Sets the sticky toolbar to be on top */
+  z-index: 1000; /* Ensure that your app's content doesn't overlap the toolbar */
 }
 
-@media(max-width: 959px){
-  mat-toolbar{
-    border-radius: 0px;
+.submenu {
+  background: $secondary-color !important;
+  height: 2.18rem;
+  padding: 0 16px 0 0;
+
+  button {
+    margin-top: -5px;
+  }
+
+  .icon-option span {
+    margin-left: 0.3rem;
+    font-size: 0.8rem;
+    color: $gray-color;
+  }
+
+  .icon-option mat-icon {
+    font-size: 1rem;
+    height: 100%;
   }
 }
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+img.logo {
+  width: 6rem;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+.mat-drawer-backdrop.mat-drawer-shown {
+  background-color: transparent !important;
+}
+
+.input-group {
+  width: 50%;
+
+  .form-control {
+    padding: 0.275rem 0.75rem;
+    font-size: 0.9rem;
+    border-radius: 0.4rem 0 0 0.4rem;
+    height: 2rem;
+    margin: auto;
+    border: 0;
+    @media (max-width: 768px) {
+      font-size: 1rem;
+      height: 2.2rem;
+      box-shadow: 0px 3px 5px -1px rgb(0 0 0 / 20%), 0px 5px 8px 0px rgb(0 0 0 / 14%), 0px 1px 14px 0px rgb(0 0 0 / 12%);
+    }
+  }
+
+  .form-control:focus {
+    outline: 0 !important;
+    box-shadow: none;
+  }
+
+  .btn {
+    line-height: 1;
+    padding: .275rem .75rem;
+    border-radius: 0 0.4rem 0.4rem 0;
+    border: 1px solid $link-color;
+    background: $link-color;
+    height: 2rem;
+    margin-top: -4px;
+    @media (max-width: 768px) {
+      height: 2.2rem;
+      box-shadow: 0px 3px 5px -1px rgb(0 0 0 / 20%), 0px 5px 8px 0px rgb(0 0 0 / 14%), 0px 1px 14px 0px rgb(0 0 0 / 12%);
+      margin-top: 0;
+    }
+  }
+
+  input::placeholder {
+    font-size: 0.9rem;
+    @media (max-width: 768px) {
+      font-size: 1rem;
+    }
+  }
+
+  button:focus {
+    outline: 0 !important;
+    box-shadow: none;
+  }
+}
+
+.mat-menu-item .mat-icon-no-color, .mat-menu-submenu-icon {
+  color: $gray-color !important;
+}
+
+mat-icon {
+  color: $gray-color !important;
+}
+
+.mat-drawer.mat-drawer-end {
+  height: 100vh;
+  position: fixed;
+}
+
+::ng-deep .mat-option-text {
+  font-size: 0.9rem;
+}
+
+::ng-deep .mat-autocomplete-panel {
+  border-radius: 0.4rem !important;
+  margin-top: 0.2rem;
+}
+
+.input-group-append {
+  margin: auto;
+}
+
+.search-mobile {
+  width: 92% !important;
+  position: absolute;
+  top: 56px;
+  z-index: 999;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+
+.mat-menu-item {
+  color: $gray-color;
+}
+
+::ng-deep .mat-menu-panel {
+  background: $primary-color;
+}
+
+.user-info{
+  padding-left: 1.5rem;
+  margin-top: 0.4rem;
+  div{
+    text-align: right;
+    font-size: 0.8rem;
+    height: 1rem;
+    line-height: 0.8rem;
+  }
+}
+
+.sidebarExpanded {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+  -webkit-transition: transform 0.3s ease-in-out;
+  -moz-transition: transform 0.3s ease-in-out;
+  -o-transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+}
+
+.sidebarClosed {
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: transform 0.3s ease-in-out;
+  -moz-transition: transform 0.3s ease-in-out;
+  -o-transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+}
+
+
