@@ -1,3 +1,319 @@
-<app-header></app-header>
+<mat-drawer-container>
+  <mat-drawer-content>
+    <app-navigation></app-navigation>
 
-<app-footer></app-footer>
+<!--    <div class="app-container dashboard">-->
+<!--      <div class="row">-->
+<!--        <app-collapsable-container [content]="content" header="Default News Widget">-->
+
+<!--          <ng-template #content>-->
+<!--            <div class="row text-center">-->
+<!--              <div class="actions">-->
+<!--                <app-widget-item text="Compliance News" icon="check_circle"></app-widget-item>-->
+<!--                <app-widget-item text="Infrastructure News" icon="feedback"></app-widget-item>-->
+<!--                <app-widget-item text="Case Law Feed by State" icon="work"></app-widget-item>-->
+<!--                <app-widget-item text="Team Updates" icon="people"></app-widget-item>-->
+<!--                <app-widget-item text="Other Widget" icon="error"></app-widget-item>-->
+<!--                <app-widget-item text="Other Widget" icon="folder"></app-widget-item>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </ng-template>-->
+<!--        </app-collapsable-container>-->
+<!--      </div>-->
+<!--      <div class="row">-->
+<!--        <div class="col-12 col-lg-8">-->
+<!--          <app-collapsable-container [content]="content1" header="My Assignments">-->
+
+<!--            <ng-template #content1>-->
+<!--              <div class="table">-->
+<!--                <div class="table-content">-->
+<!--                  <div class="table-row">-->
+<!--                    <div class="table-data icon-column">-->
+<!--                      <mat-icon>assignment</mat-icon>-->
+<!--                    </div>-->
+<!--                    <div class="table-data"><a >Support Team (Staff)</a> completed task <a >[SAMPLE] Deadline to-->
+<!--                      Submit</a>... about 22 hours-->
+<!--                      ago-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                  <div class="table-row">-->
+<!--                    <div class="table-data icon-column">-->
+<!--                      <mat-icon>assignment</mat-icon>-->
+<!--                    </div>-->
+<!--                    <div class="table-data"><a >Support Team (Staff)</a> commented on task <a >[SAMPLE] Deadline-->
+<!--                      to Submit</a>... about 22 hours ago | <a >[SAMPLE] John Doe Matter</a>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                  <div class="table-row">-->
+<!--                    <div class="table-data icon-column">-->
+<!--                      <mat-icon>assignment</mat-icon>-->
+<!--                    </div>-->
+<!--                    <div class="table-data"><a >Support Team (Staff)</a> completed task <a >[SAMPLE] Collect-->
+<!--                      Intake Form</a> about 22 hours ago | <a >[SAMPLE] Jane Doe</a>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                  <div class="table-row">-->
+<!--                    <div class="table-data icon-column">-->
+<!--                      <mat-icon>assignment</mat-icon>-->
+<!--                    </div>-->
+<!--                    <div class="table-data"><a >Support Team (Staff)</a> updated task <a >Jane Doe (Lead)</a>-->
+<!--                      about 10 hours ago-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                  <div class="table-row">-->
+<!--                    <div class="table-data icon-column">-->
+<!--                      <mat-icon>assignment</mat-icon>-->
+<!--                    </div>-->
+<!--                    <div class="table-data"><a >Support Team (Staff)</a> updated task <a >Jane Doe (Lead)</a>-->
+<!--                      about 13 hours ago-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                  <div class="table-row">-->
+<!--                    <div class="table-data icon-column">-->
+<!--                      <mat-icon>assignment</mat-icon>-->
+<!--                    </div>-->
+<!--                    <div class="table-data"><a >Support Team (Staff)</a> updated task <a >Jane Doe (Lead)</a>-->
+<!--                      about 20 hours ago-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                  <div class="table-row">-->
+<!--                    <div class="table-data icon-column">-->
+<!--                      <mat-icon>assignment</mat-icon>-->
+<!--                    </div>-->
+<!--                    <div class="table-data"><a >Support Team (Staff)</a> completed task <a >[SAMPLE] Deadline to-->
+<!--                      Submit</a>... about 22 hours-->
+<!--                      ago | <a >[SAMPLE] John Doe Matter</a>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+
+<!--              <div class="px-3">-->
+<!--                <a  style="font-weight: bold">View all assignments</a>-->
+<!--              </div>-->
+<!--            </ng-template>-->
+
+<!--          </app-collapsable-container>-->
+
+<!--          <app-collapsable-container [content]="content2" header="Recent Activity">-->
+
+<!--            <ng-template #content2>-->
+<!--              <mat-tab-group>-->
+<!--                <mat-tab label="All">-->
+
+<!--                  <div class="table">-->
+<!--                    <div class="table-content">-->
+<!--                      <div class="table-row">-->
+<!--                        <div class="table-data icon-column">-->
+<!--                          <mat-icon>assignment</mat-icon>-->
+<!--                        </div>-->
+<!--                        <div class="table-data"><a >Support Team (Staff)</a> completed task <a >[SAMPLE]-->
+<!--                          Deadline to Submit</a>... about 22 hours-->
+<!--                          ago-->
+<!--                        </div>-->
+<!--                      </div>-->
+<!--                      <div class="table-row">-->
+<!--                        <div class="table-data icon-column">-->
+<!--                          <mat-icon>assignment</mat-icon>-->
+<!--                        </div>-->
+<!--                        <div class="table-data"><a >Support Team (Staff)</a> commented on task <a >[SAMPLE]-->
+<!--                          Deadline to Submit</a>... about 22 hours ago | <a >[SAMPLE] John Doe Matter</a>-->
+<!--                        </div>-->
+<!--                      </div>-->
+<!--                      <div class="table-row">-->
+<!--                        <div class="table-data icon-column">-->
+<!--                          <mat-icon>assignment</mat-icon>-->
+<!--                        </div>-->
+<!--                        <div class="table-data"><a >Support Team (Staff)</a> completed task <a >[SAMPLE] Collect-->
+<!--                          Intake Form</a> about 22 hours ago | <a >[SAMPLE] Jane Doe</a>-->
+<!--                        </div>-->
+<!--                      </div>-->
+<!--                      <div class="table-row">-->
+<!--                        <div class="table-data icon-column">-->
+<!--                          <mat-icon>assignment</mat-icon>-->
+<!--                        </div>-->
+<!--                        <div class="table-data"><a >Support Team (Staff)</a> updated task <a >Jane Doe-->
+<!--                          (Lead)</a> about 10 hours ago-->
+<!--                        </div>-->
+<!--                      </div>-->
+<!--                      <div class="table-row">-->
+<!--                        <div class="table-data icon-column">-->
+<!--                          <mat-icon>assignment</mat-icon>-->
+<!--                        </div>-->
+<!--                        <div class="table-data"><a >Support Team (Staff)</a> updated task <a >Jane Doe-->
+<!--                          (Lead)</a> about 13 hours ago-->
+<!--                        </div>-->
+<!--                      </div>-->
+<!--                      <div class="table-row">-->
+<!--                        <div class="table-data icon-column">-->
+<!--                          <mat-icon>assignment</mat-icon>-->
+<!--                        </div>-->
+<!--                        <div class="table-data"><a >Support Team (Staff)</a> updated task <a >Jane Doe-->
+<!--                          (Lead)</a> about 20 hours ago-->
+<!--                        </div>-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                  </div>-->
+
+<!--                  <div class="px-3">-->
+<!--                    <a  style="font-weight: bold">View all activities</a>-->
+<!--                  </div>-->
+
+<!--                </mat-tab>-->
+<!--                <mat-tab label="Assignments">-->
+<!--                  <div class="pt-4">-->
+<!--                    <app-simple-container [isGray]="true">-->
+<!--                      <div class="row py-5 px-3 text-center">-->
+<!--                        <span style="font-size: 2rem; color: #4D5264">Assignments</span>-->
+<!--                      </div>-->
+<!--                    </app-simple-container>-->
+<!--                  </div>-->
+<!--                </mat-tab>-->
+<!--                <mat-tab label="Events">-->
+<!--                  <div class="pt-4">-->
+<!--                    <app-simple-container [isGray]="true">-->
+<!--                      <div class="row py-5 px-3 text-center">-->
+<!--                        <span style="font-size: 2rem; color: #4D5264">Events</span>-->
+<!--                      </div>-->
+<!--                    </app-simple-container>-->
+<!--                  </div>-->
+<!--                </mat-tab>-->
+<!--                <mat-tab label="Documents">-->
+<!--                  <div class="pt-4">-->
+<!--                    <app-simple-container [isGray]="true">-->
+<!--                      <div class="row py-5 px-3 text-center">-->
+<!--                        <span style="font-size: 2rem; color: #4D5264">Documents</span>-->
+<!--                      </div>-->
+<!--                    </app-simple-container>-->
+<!--                  </div>-->
+<!--                </mat-tab>-->
+<!--                <mat-tab label="Billing">-->
+<!--                  <div class="pt-4">-->
+<!--                    <app-simple-container [isGray]="true">-->
+<!--                      <div class="row py-5 px-3 text-center">-->
+<!--                        <span style="font-size: 2rem; color: #4D5264">Billing</span>-->
+<!--                      </div>-->
+<!--                    </app-simple-container>-->
+<!--                  </div>-->
+<!--                </mat-tab>-->
+<!--              </mat-tab-group>-->
+<!--            </ng-template>-->
+
+<!--          </app-collapsable-container>-->
+
+<!--        </div>-->
+<!--        <div class="col-12 col-lg-4">-->
+
+<!--          <app-collapsable-container [content]="content3" header="Calendar Deadlines">-->
+<!--            <ng-template #content3>-->
+<!--              <div class="pt-4">-->
+<!--                <full-calendar [options]="calendarOptions"></full-calendar>-->
+<!--              </div>-->
+<!--            </ng-template>-->
+<!--          </app-collapsable-container>-->
+
+<!--          <app-collapsable-container [content]="content4" header="Incoming Mail">-->
+
+<!--            <ng-template #content4>-->
+<!--              <div class="table">-->
+<!--                <div class="table-content">-->
+<!--                  <div class="table-row">-->
+<!--                    <div class="table-data icon-column">-->
+<!--                      <mat-icon class="account-mail">account_circle</mat-icon>-->
+<!--                    </div>-->
+<!--                    <div class="table-data">-->
+<!--                      <a>Jon Matew</a><br>-->
+<!--                      <span>Neque est qui dolorem ipsum...</span>-->
+<!--                    </div>-->
+<!--                    <span class="example-spacer"></span>-->
+<!--                    <div class="table-data">-->
+<!--                      <span><strong>16:16pm</strong></span><br>-->
+<!--                      <span>June 13, 2022</span>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                  <div class="table-row">-->
+<!--                    <div class="table-data icon-column">-->
+<!--                      <mat-icon class="account-mail">account_circle</mat-icon>-->
+<!--                    </div>-->
+<!--                    <div class="table-data">-->
+<!--                      <a>Jane Doe</a><br>-->
+<!--                      <span>Lorem ipsum dolor sit amet, consectetur...</span>-->
+<!--                    </div>-->
+<!--                    <span class="example-spacer"></span>-->
+<!--                    <div class="table-data">-->
+<!--                      <span><strong>15:56pm</strong></span><br>-->
+<!--                      <span>June 13, 2022</span>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                  <div class="table-row">-->
+<!--                    <div class="table-data icon-column">-->
+<!--                      <mat-icon class="account-mail">account_circle</mat-icon>-->
+<!--                    </div>-->
+<!--                    <div class="table-data">-->
+<!--                      <a>Jon Matew</a><br>-->
+<!--                      <span>Neque est qui dolorem ipsum...</span>-->
+<!--                    </div>-->
+<!--                    <span class="example-spacer"></span>-->
+<!--                    <div class="table-data">-->
+<!--                      <span><strong>15:22pm</strong></span><br>-->
+<!--                      <span>June 13, 2022</span>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                  <div class="table-row">-->
+<!--                    <div class="table-data icon-column">-->
+<!--                      <mat-icon class="account-mail">account_circle</mat-icon>-->
+<!--                    </div>-->
+<!--                    <div class="table-data">-->
+<!--                      <a>Lucas Fabian</a><br>-->
+<!--                      <span>Neque est qui dolorem ipsum...</span>-->
+<!--                    </div>-->
+<!--                    <span class="example-spacer"></span>-->
+<!--                    <div class="table-data">-->
+<!--                      <span><strong>11:43am</strong></span><br>-->
+<!--                      <span>June 13, 2022</span>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                  <div class="table-row">-->
+<!--                    <div class="table-data icon-column">-->
+<!--                      <mat-icon class="account-mail">account_circle</mat-icon>-->
+<!--                    </div>-->
+<!--                    <div class="table-data">-->
+<!--                      <a>Jon Matew</a><br>-->
+<!--                      <span>Lorem ipsum dolor sit amet, consectetur...</span>-->
+<!--                    </div>-->
+<!--                    <span class="example-spacer"></span>-->
+<!--                    <div class="table-data">-->
+<!--                      <span><strong>10:36am</strong></span><br>-->
+<!--                      <span>June 13, 2022</span>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                  <div class="table-row">-->
+<!--                    <div class="table-data icon-column">-->
+<!--                      <mat-icon class="account-mail">account_circle</mat-icon>-->
+<!--                    </div>-->
+<!--                    <div class="table-data">-->
+<!--                      <a>Jon Matew</a><br>-->
+<!--                      <span>Neque est qui dolorem ipsum...</span>-->
+<!--                    </div>-->
+<!--                    <span class="example-spacer"></span>-->
+<!--                    <div class="table-data">-->
+<!--                      <span><strong>09:05am</strong></span><br>-->
+<!--                      <span>June 12, 2022</span>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+
+<!--              <div class="px-3">-->
+<!--                <a  style="font-weight: bold">View all Mails</a>-->
+<!--              </div>-->
+<!--            </ng-template>-->
+
+<!--          </app-collapsable-container>-->
+
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+  </mat-drawer-content>
+</mat-drawer-container>
+

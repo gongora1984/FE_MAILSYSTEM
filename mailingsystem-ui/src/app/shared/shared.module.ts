@@ -9,7 +9,6 @@ import {RouterModule} from "@angular/router";
 import { LoadingComponent } from './components/loading/loading.component';
 import { GobackComponent } from './components/goback/goback.component';
 import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
-import { CoreComponent } from './components/core/core.component';
 import { CollasableContainerComponent } from './components/collasable-container/collasable-container.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { HeaderComponent } from './components/navigation/header/header.component';
@@ -35,6 +34,8 @@ import { HeaderComponent } from './components/navigation/header/header.component
   ],
   exports: [
     AppMaterialModule,
+    NavigationComponent,
+    HeaderComponent,
   ]
 })
 export class SharedModule {
